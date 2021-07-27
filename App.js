@@ -32,15 +32,6 @@
  import { Button, WinUI } from 'react-native-xaml';
  import { Picker } from '@react-native-picker/picker';
  import { Expander } from '@fluentui-react-native/experimental-expander';
-  
- const icon: ImageURISource = {
-   uri:
-     "https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png"
- };
- 
- // const CustomNativeButton = NativeButton.customize({
- //   accentColor: '#fca905',
- // });
  
  class App extends Component {
  
@@ -97,10 +88,10 @@
                  <Text>Text in the content</Text>
                </Expander>
 
-               <Text>{"\n"}Expander 4: Disabled</Text>
+               <Text>{"\n"}Expander 4: Disabled control</Text>
 
                <Expander collapsedHeight={50} enabled={false}>
-                 <Text>I am disabled</Text>
+                 <Text>User cannot interact with this control</Text>
                  <Text>Content that you should not see</Text>
                </Expander>
 
@@ -147,7 +138,7 @@
  
                <Text>{"\n"}Expander 7: React Native XAML control in header</Text>
  
-               <Expander collapsedHeight={70} expandedHeight={225} chevronUpGlyph={icon}>
+               <Expander collapsedHeight={70} expandedHeight={225}>
                  <View style={{width: 300, padding:8}}>
                    <Text>Multiple components in the header</Text>
                    <Button content="react-native-xaml button" onClick={() => { alert("you clicked the button!"); }} />
